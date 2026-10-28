@@ -155,7 +155,9 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 /* ============ THE CONCERNS ============ */
 .concern-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(40px,6vw,96px);align-items:start}
 .concern-head .lead{margin-top:20px}
-.concern-head .lead+.lead{margin-top:14px;color:#e9e5df;font-weight:600}
+.br-d{display:block}
+@media (max-width:600px){.br-d{display:none}}
+.concerns-intro{margin:0 0 18px;font-size:clamp(18px,1.5vw,20px);font-weight:600;color:#e9e5df}
 .concerns{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0;padding:0;list-style:none}
 .concerns li{padding:24px;border-radius:var(--rad);background:var(--panel);box-shadow:inset 0 0 0 1px var(--hair)}
 .concerns .x{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.04);box-shadow:inset 0 0 0 1px var(--hair2);color:var(--red2)}
@@ -513,14 +515,16 @@ footer a:hover{color:#fff}
     <div class="concern-head">
       <h2 class="h2 rv" id="concern-t">What If Your Prized Sports Cards <em>Aren't What They Seem?</em></h2>
       <p class="lead rv">From vintage legends to modern rookie cards, appearances can be deceiving.</p>
-      <p class="lead rv">Some of the biggest concerns facing sports collectors include:</p>
     </div>
+    <div>
+      <p class="concerns-intro rv">Some of the biggest concerns facing sports<br class="br-d"> collectors include:</p>
     <ul class="concerns">
       <li class="rv"><span class="x"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></span><b>Trimmed Edges &amp; Altered Corners</b><p>Cards may be cut or modified to make their condition appear better than it really is.</p></li>
       <li class="rv" style="--d:.08s"><span class="x"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></span><b>Recolored Parallels &amp; Manipulated Details</b><p>A common card can be altered to resemble a rarer, more desirable version.</p></li>
       <li class="rv" style="--d:.16s"><span class="x"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></span><b>Counterfeit Cards &amp; Swapped Slabs</b><p>A convincing holder or certification label doesn't always tell the full story.</p></li>
       <li class="rv" style="--d:.24s"><span class="x"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></span><b>Unexplained Or Inconsistent Grades</b><p>When collectors can't see how a grade was determined, they're left with questions about the result.</p></li>
     </ul>
+    </div>
   </div>
 </section>
 
